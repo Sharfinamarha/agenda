@@ -50,7 +50,7 @@
         @yield('container')
     </div>
     <footer class="footer mt-auto py-3 bg-secondary mt-auto">
-        <div class="container text-end">
+        <div class="container text-center">
             <span class="text-white">PUSAT DATA DAN SISTEM INFORMASI KEMENTERIAN DALAM NEGERI</span>
         </div>
     </footer>

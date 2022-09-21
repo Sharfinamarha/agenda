@@ -42,7 +42,7 @@
             @forelse ($todayEvent as $event)
                 <div class="carousel-item @if ($loop->iteration == 1) active @endif" data-bs-interval="5000">
                     <div class="d-block w-300">
-                        <h3 class="text-center mb-5">Agenda Hari Ini</h3>
+                        <h1 style="font-family:'Tahoma'" class="text-center mb-5">Agenda Hari Ini</h1>
                         <!-- <div class="row"> -->
                             <div class="row d-flex justify-content-center">
                                 <!-- <div class="col-9"> -->
@@ -50,10 +50,10 @@
                                         <div class="desc">
                                             <div class="row h1">
                                                 <div class="col-12 text-center">
-                                                    {{ $event->title }}
+                                                    <b>{{ $event->title }}</b>
                                                 </div>
                                             </div>
-                                            <div class="row h2">
+                                            <div class="row h1">
                                                 <div class="col-12 text-center">
                                                     {{ $event->location }}
                                                 </div>
@@ -63,9 +63,11 @@
                                                     {{ $event->penyelenggara }}
                                                 </div>
                                             </div>
-                                            <div class="row h3">
+                                            <div class="row h1">
                                                 <div class="col-12 text-center">
-                                                    {{ \Carbon\Carbon::parse($event->start)->translatedFormat('l, d F Y') }}
+                                                    {{ \Carbon\Carbon::parse($event->start)->translatedFormat('l, d F Y') }}<br/>
+                                                    {{ \Carbon\Carbon::parse($event->start)->translatedFormat('h:i') }} WIB sampai
+                                                    {{ \Carbon\Carbon::parse($event->end)->translatedFormat('h:i') }} WIB
                                                 </div>
                                             </div>
                                         </div>
@@ -98,16 +100,16 @@
             @forelse ($upcomingEvent as $event)
                 <div class="carousel-item" data-bs-interval="3000">
                     <div class="d-block w-100">
-                        <h3 class="text-center mb-5">Agenda Akan Datang</h3>
+                        <h1 style="font-family:'Tahoma'" class="text-center mb-5">Agenda Akan Datang</h1>
                         <div class="row mt-5">
                             <div class="row d-flex justify-content-center">
                                 <div class="desc">
                                     <div class="row h1">
                                         <div class="col-12 text-center">
-                                            {{ $event->title }}
+                                            <b>{{ $event->title }}</b>
                                         </div>
                                     </div>
-                                    <div class="row h2">
+                                    <div class="row h1">
                                         <div class="col-12 text-center">
                                             {{ $event->location }}
                                         </div>
@@ -117,9 +119,11 @@
                                             {{ $event->penyelenggara }}
                                         </div>
                                     </div>
-                                    <div class="row h3">
+                                    <div class="row h1">
                                         <div class="col-12 text-center">
-                                            {{ \Carbon\Carbon::parse($event->start)->translatedFormat('l, d F Y') }}
+                                            {{ \Carbon\Carbon::parse($event->start)->translatedFormat('l, d F Y') }}<br/>
+                                            {{ \Carbon\Carbon::parse($event->start)->translatedFormat('h:i') }} WIB sampai
+                                            {{ \Carbon\Carbon::parse($event->end)->translatedFormat('h:i') }} WIB
                                         </div>
                                     </div>
                                 </div>

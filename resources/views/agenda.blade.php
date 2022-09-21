@@ -32,10 +32,10 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="peserta" class="form-label">Peserta Agenda</label>
+                    <label for="peserta" class="form-label">Disposisi</label>
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-fill"></i></span>
-                        <input type="text" id="peserta" class="form-control" placeholder="Peserta" required>
+                        <input type="text" id="peserta" class="form-control" placeholder="Disposisi" value="">
                     </div>
                 </div>
                 <div class="mb-3">
@@ -90,10 +90,10 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="peserta" class="form-label">Peserta Agenda</label>
+                    <label for="peserta" class="form-label">Disposisi</label>
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-fill"></i></span>
-                        <input type="text" id="edit-peserta" class="form-control" placeholder="Peserta" required>
+                        <input type="text" id="edit-peserta" class="form-control" placeholder="Disposisi">
                     </div>
                 </div>
                 <div class="mb-3">
