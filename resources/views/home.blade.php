@@ -40,7 +40,7 @@
         </div>
         <div class="carousel-inner">
             @forelse ($todayEvent as $event)
-                <div class="carousel-item @if ($loop->iteration == 1) active @endif" data-bs-interval="5000">
+                <div class="carousel-item @if ($loop->iteration == 1) active @endif" data-bs-interval="6000">
                     <div class="d-block w-300">
                         <h1 style="font-family:'Tahoma'" class="text-center mb-5">Agenda Hari Ini</h1>
                         <!-- <div class="row"> -->
@@ -66,8 +66,8 @@
                                             <div class="row h1">
                                                 <div class="col-12 text-center">
                                                     {{ \Carbon\Carbon::parse($event->start)->translatedFormat('l, d F Y') }}<br/>
-                                                    {{ \Carbon\Carbon::parse($event->start)->translatedFormat('h:i') }} WIB sampai
-                                                    {{ \Carbon\Carbon::parse($event->end)->translatedFormat('h:i') }} WIB
+                                                    {{ \Carbon\Carbon::parse($event->start)->translatedFormat('H:i') }} WIB sampai
+                                                    {{ \Carbon\Carbon::parse($event->end)->translatedFormat('H:i') }} WIB
                                                 </div>
                                             </div>
                                         </div>
@@ -98,7 +98,7 @@
                 </div>
             @endforelse
             @forelse ($upcomingEvent as $event)
-                <div class="carousel-item" data-bs-interval="3000">
+                <div class="carousel-item" data-bs-interval="6000">
                     <div class="d-block w-100">
                         <h1 style="font-family:'Tahoma'" class="text-center mb-5">Agenda Akan Datang</h1>
                         <div class="row mt-5">
@@ -122,8 +122,8 @@
                                     <div class="row h1">
                                         <div class="col-12 text-center">
                                             {{ \Carbon\Carbon::parse($event->start)->translatedFormat('l, d F Y') }}<br/>
-                                            {{ \Carbon\Carbon::parse($event->start)->translatedFormat('h:i') }} WIB sampai
-                                            {{ \Carbon\Carbon::parse($event->end)->translatedFormat('h:i') }} WIB
+                                            {{ \Carbon\Carbon::parse($event->start)->translatedFormat('H:i') }} WIB sampai
+                                            {{ \Carbon\Carbon::parse($event->end)->translatedFormat('H:i') }} WIB
                                         </div>
                                     </div>
                                 </div>
@@ -165,7 +165,7 @@
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <button style="margin-top: 64px" class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
     </button>
