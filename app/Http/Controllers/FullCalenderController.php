@@ -29,9 +29,9 @@ class FullCalenderController extends Controller
         }
 
         if($sort == null || $sort == 'newest' || $sort == 'all'){
-            $query->orderBy('created_at', 'desc');
+            $query->orderBy('start', 'desc');
         } elseif ($sort == 'oldest'){
-            $query->orderBy('created_at', 'asc');
+            $query->orderBy('start', 'asc');
         }
 
 		$eventdata = $query->get();
